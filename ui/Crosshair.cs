@@ -45,7 +45,7 @@ public class Crosshair : Panel
 		StyleSheet.Load( "/ui/Crosshair.scss" );
 	}
 
-	public void SetupCrosshair(Properties crosshairProperties)
+	public Panel SetupCrosshair(Properties crosshairProperties)
 	{
 		var crossHairLinesToCreate = crosshairProperties.ShowTop ? 4 : 3;
 		for ( var i = 0; i < crossHairLinesToCreate; ++i )
@@ -93,5 +93,7 @@ public class Crosshair : Panel
 		}
 		
 		Style.Dirty();
+		
+		return this;
 	}
 }
