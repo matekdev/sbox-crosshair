@@ -42,7 +42,7 @@ Crosshair.Current?.SetupCrosshair(new Crosshair.Properties(
 ));
 ```
 
-Here is an example of displaying a crosshair on HUD creation
+Full usage...
 
 ```csharp
 public MinimalHudEntity()
