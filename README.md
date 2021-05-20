@@ -1,11 +1,31 @@
 # sbox-crosshair
-A complete and configurable crosshair system built for [s&box](https://sbox.facepunch.com/news)
+A semi-complete and configurable crosshair system built for [s&box](https://sbox.facepunch.com/news)
 
 ## Installation
 
 Drag the `ui` folder into the `code` folder of your gamemode. Ex. `minimal/code/ui`
 
 ## Usage
+
+Add the following to the setup of your main gamemode hud.
+
+```csharp
+RootPanel.AddChild<Crosshair>();
+```
+
+```csharp
+public MinimalHudEntity()
+{
+  if ( IsClient )
+  {
+    RootPanel.SetTemplate( "/minimalhud.html" );
+
+    RootPanel.AddChild<ChatBox>();
+
+    RootPanel.AddChild<Crosshair>();
+  }
+}
+```
 
 Call `SetupCrosshair` and optionally provide some `properties`. The `properties` follow a very similar structure to CS:GO.
 
@@ -20,6 +40,22 @@ Crosshair.Current?.SetupCrosshair(new Crosshair.Properties(
   -25,
   new Color(0.1f, 1f, 0.3f, 1f)
 ));
+```
+
+Full usage...
+
+```csharp
+public MinimalHudEntity()
+{
+  if ( IsClient )
+  {
+    RootPanel.SetTemplate( "/minimalhud.html" );
+
+    RootPanel.AddChild<ChatBox>();
+
+    RootPanel.AddChild<Crosshair>().SetupCrosshair(new Crosshair.Properties());
+  }
+}
 ```
 
 ## Examples
