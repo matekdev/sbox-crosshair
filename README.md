@@ -1,5 +1,5 @@
 # sbox-crosshair
-A complete and configurable crosshair system built for [s&box](https://sbox.facepunch.com/news)
+A semi-complete and configurable crosshair system built for [s&box](https://sbox.facepunch.com/news)
 
 ## Installation
 
