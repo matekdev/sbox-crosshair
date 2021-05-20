@@ -42,6 +42,22 @@ Crosshair.Current?.SetupCrosshair(new Crosshair.Properties(
 ));
 ```
 
+Here is an example of displaying a crosshair on HUD creation
+
+```csharp
+public MinimalHudEntity()
+{
+  if ( IsClient )
+  {
+    RootPanel.SetTemplate( "/minimalhud.html" );
+
+    RootPanel.AddChild<ChatBox>();
+
+    RootPanel.AddChild<Crosshair>().SetupCrosshair(new Crosshair.Properties());
+  }
+}
+```
+
 ## Examples
 
 ![Example 1 crosshair](https://raw.githubusercontent.com/mzegar/sbox-crosshair/main/examples/1.png)
