@@ -60,16 +60,16 @@ public class Crosshair : Panel
 			
 			switch ( i )
 			{
-				case 0:
+				case 0: // Left element
 					crossHairLine.Style.Left = Length.Pixels(crosshairProperties.Size + crosshairProperties.Gap);
 					break;
-				case 1:
-					crossHairLine.Style.Bottom = Length.Pixels(-crosshairProperties.Size * 2 - crosshairProperties.Gap);
+				case 1: // Bottom element
+					crossHairLine.Style.Top = Length.Pixels(crosshairProperties.Size + crosshairProperties.Gap);
 					break;
-				case 2:
+				case 2: // Right element
 					crossHairLine.Style.Left = Length.Pixels(-crosshairProperties.Size - crosshairProperties.Gap);
 					break;
-				case 3:
+				case 3: // Top element
 					crossHairLine.Style.Top = Length.Pixels(-crosshairProperties.Size - crosshairProperties.Gap); 
 					break;
 			}
